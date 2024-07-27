@@ -1,0 +1,144 @@
+45. Making Sub Dropdown Menu 75 Part 05
+
+
+
+
+#menu li ul li{
+    float:none;
+    border-right: none;
+    border-left: none;
+    border-top: 3px solid #605B5B;
+    border-bottom: 3px solid #2B2A2A;
+    position: relative;
+    width: 200px;
+}
+
+/* SubDropdown */
+#menu li ul li ul{
+    position: absolute;
+    top: -99999px;
+}
+
+#menu li ul li:hover ul{
+    top: 0;
+    left: 200px;
+}
+======================================================
+
+===================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45. Making Sub Dropdown Menu 75 Part 05</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">HTML</a>
+            <ul>
+                <li><a href="#">Bold</a></li>
+                <li><a href="#">Italic</a></li>
+                <li><a href="#">Underline</a></li>
+                <li><a href="#">Small Font</a>
+                    <ul>
+                        <li><a href="#">Eng</a></li>
+                        <li><a href="#">Bangla</a></li>
+                        <li><a href="#">Hindi</a></li>
+                        <li><a href="#">Spanish</a></li>
+                        <li><a href="#">Chinise</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Large Font</a></li>
+            </ul>
+        
+        </li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JS</a></li>
+        <li><a href="#">PHP</a></li>
+        <li><a href="#">WP</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Service</a></li>
+    </ul>
+</body>
+</html>
+=========================================
+ul#menu{
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+    width: 960px;
+    background-color: #4E4E4E;
+    border-bottom: 5px solid orangered;
+    min-height: 38px;
+}
+ul#menu li{
+    /* display: inline; */
+    float:left;
+    /* border-right: 3px solid red; */
+    border-right: 3px solid #605B5B;
+    border-left: 3px solid #2B2A2A;
+    /* border-bottom: 5px solid orangered; */
+    position: relative;
+}
+
+ul#menu li:last-child{
+    border-right: none;
+}
+
+ul#menu li :first-child{
+    border-left: none;
+}
+
+ul#menu li a{
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: #4E4E4E;
+    /* background-color: blue; */
+    padding: 10px 20px;
+    display:block; 
+
+    transition: all 1s ease;
+}
+
+ul#menu li a:hover{
+    background-color: orange;
+}
+
+/* dropdown menu */
+
+#menu li ul{
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    left: -99999px;
+
+    /* transition: all 2s ease; */
+}
+
+#menu li:hover ul{
+    left: 0;
+}
+
+#menu li ul li{
+    float:none;
+    border-right: none;
+    border-left: none;
+    border-top: 3px solid #605B5B;
+    border-bottom: 3px solid #2B2A2A;
+    position: relative;
+    width: 200px;
+}
+
+/* SubDropdown */
+#menu li ul li ul{
+    position: absolute;
+    top: -99999px;
+}
+
+#menu li ul li:hover ul{
+    top: 0;
+    left: 200px;
+}
